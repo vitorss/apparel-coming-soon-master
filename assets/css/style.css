@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet');
+/* reset css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li, span, a, img, blockquote, cite, table {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    background-image: url('/assets/img/bg-pattern-desktop.svg');
+    background-size: cover;
+    background-position: center;
+    font-family: var(--font-family);
+    font-size: var(--font-16px);
+}
+
+:root {
+    /* font */
+    --font-family: 'Josefin Sans', sans-serif;
+    /* font-size */
+    --font-12px: 12px;
+    --font-16px: 1rem;
+    --font-18px: 1.125rem;
+    --font-24px: 1.5rem;
+    --font-32px: 2rem;
+    --font-40px: 2.5rem;
+    --font-48px: 3rem;
+    --font-56px: 3.5rem;
+    --font-64px: 4rem;
+    --font-72px: 4.5rem;
+    --font-80px: 5rem;
+    --font-88px: 5.5rem;
+    --font-96px: 6rem;
+    --font-104px: 6.5rem;
+    --font-112px: 7rem;
+    /* colors */
+    --color-desaturated-red: hsl(0, 36%, 70%);
+    --color-soft-red: hsl(0, 93%, 68%);
+    --color-dark-grayish-red: hsl(0, 6%, 24%);
+    --color-hover: hsl(0, 80%, 86%);
+    --color-gradient-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* navbar */
+
+.navigation {
+    position: absolute;
+    width: 100%;
+}
+
+.navbar {
+    padding: var(--font-56px) 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* wrapper */
+
+.wrapper {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: right;
+}
+
+.content-info {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: var(--font-80px);
+}
+
+.info {
+    padding: 0 200px 0 150px;
+}
+
+.title {
+    font-size: var(--font-72px);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: var(--color-dark-grayish-red);
+}
+
+.title span {
+    color: var(--color-desaturated-red);
+    font-weight: 300;
+}
+
+.subtitle {
+    margin-top: var(--font-24px);
+    color: var(--color-desaturated-red);
+    line-height: var(--font-32px);
+}
+
+.form {
+    margin-top: var(--font-24px);
+}
+
+.box-input {
+    position: relative;
+    width: 100%;
+}
+
+.input {
+    padding: var(--font-16px) var(--font-80px) var(--font-16px) var(--font-18px);
+    border-radius: 30px;
+    border: 1px solid hsl(0, 80%, 86%);
+    color: var(--color-desaturated-red);
+    width: 100%;
+    outline: none;
+    transition: .3s;
+}
+
+.input::placeholder {
+    color: var(--color-hover);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.input:focus {
+    border-color: var(--color-desaturated-red);
+    transition: .3s;
+}
+
+.button {
+    padding: var(--font-16px) var(--font-40px);
+    border-radius: 30px;
+    background: var(--color-gradient-2);
+    border: none;
+    outline: none;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    position: absolute;
+    transition: .1s;
+    box-shadow: 8px 9px 34px 5px rgba(206,151,151,0.79);
+}
+
+.button:hover {
+    background: var(--color-hover);
+    transition: .1s;
+}
+
+.box-content {
+    width: 100%;
+    margin-top: var(--font-64px);
+}
+
+.content-img {
+    width: 80%;
+    height: 100%;
+    right: 0;
+    background-image: url('/assets/img/hero-desktop.jpg');
+    background-size: cover;
+}
+
+/* footer */
+
+.footer {
+    width: 100%;
+    height: var(--font-88px);
+    background: var(--color-gradient-2);
+    color: var(--color-dark-grayish-red);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    opacity: .7;
+}
+
+.attribution {
+    font-size: var(--font-12px);
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+    .navbar {
+        padding: 40px;
+        width: 100%;
+        height: 100px;
+        background: white;
+    }
+    .navbar img {
+        width: 100px;
+        height: 22px;
+        background-size: cover;
+    }
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .content-info {
+        text-align: center;
+        padding: var(--font-16px) 0;
+    }
+    .content-img {
+        margin-top: 100px;
+        height: 300px;
+        background-image: url('/assets/img/hero-mobile.jpg');
+        background-repeat: no-repeat;
+    }
+    .content-img img {
+        display: none;
+    }
+    .info {
+        padding: 0;
+    }
+    .title {
+        font-size: var(--font-40px);
+    }
+    .subtitle {
+        padding: 0 var(--font-24px);
+    }
+    .box-input {
+        padding: 0 var(--font-24px);
+    }
+    .button {
+        margin-right: var(--font-24px);
+    }
+    .footer {
+        text-align: center;
+        margin-top: var(--font-48px);
+        padding: var(--font-24px) var(--font-18px);
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 40px;
+        width: 100%;
+        height: 100px;
+        background: white;
+    }
+    .navbar img {
+        width: 100px;
+        height: 22px;
+        background-size: cover;
+    }
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .content-info {
+        text-align: center;
+        padding: var(--font-16px) 0;
+    }
+    .content-img {
+        margin-top: 100px;
+        width: 100%;
+        height: 300px;
+        background-image: url('/assets/img/hero-desktop.jpg');
+        background-repeat: no-repeat;
+    }
+    .content-img img {
+        display: none;
+    }
+    .info {
+        padding: 12px;
+    }
+    .title {
+        font-size: var(--font-40px);
+    }
+    .subtitle {
+        padding: 0 var(--font-24px);
+    }
+    .box-input {
+        padding: 0 var(--font-24px);
+    }
+    .button {
+        margin-right: var(--font-24px);
+    }
+    .footer {
+        text-align: center;
+        margin-top: var(--font-48px);
+        padding: var(--font-24px) var(--font-18px);
+    }
+}
